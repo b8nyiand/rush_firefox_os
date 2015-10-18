@@ -8,8 +8,7 @@
   },
   "developer": {
     "name": "b8nyiand",
-    "url": "http://your-homepage-here.org"
+    "url": "https://github.com/b8nyiand/rush_firefox_os"
   },
-  "default_locale": "hu",
-  "chrome": { "navigation": true }
+  "default_locale": "hu"
 }
