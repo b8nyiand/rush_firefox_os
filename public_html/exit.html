@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Exit</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style/confirm.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div>
+            <form role="dialog" data-type="confirm" onsubmit="return false">
+                <section>
+                    <h1>Megerősítés</h1><!-- this heading is optional -->
+                    <p>Biztos, hogy ki akarsz lépni?</p>
+                </section>
+                <menu>
+                    <button id="Nem_Gomb" class="recommend">Nem</button>
+                    <button id= "Igen_Gomb" class="danger">Igen</button>
+                </menu>
+            </form>
+
+        </div>
+        
+        <script type="text/javascript">
+            function Nem_Kezelo () {
+                window.location.href ="index.html";
+            }
+            
+            function Igen_Kezelo () {
+                window.close ();
+            }
+            
+            document.getElementById("Nem_Gomb").addEventListener("click", Nem_Kezelo);
+            document.getElementById("Igen_Gomb").addEventListener("click", Igen_Kezelo);
+        </script>
+    </body>
+</html>
+
