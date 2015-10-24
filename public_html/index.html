@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Task List</title>
+        <title>RUSH</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -16,7 +16,7 @@
         <div>
             <section data-type="sidebar">
                 <header>
-                    <h1>Lehetőségek</h1>
+                    <h1>Menu</h1>
                 </header>
                 <nav>
                     <ul>
@@ -29,21 +29,21 @@
                 <header>
                     <a href="#content"><span class="icon icon-menu">hide sidebar</span></a>
                     <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
-                    <h1>Chat</h1>
+                    <h1>Task List</h1>
                 </header>
                 <div role="main">
                     <section class="gaia-list fit scroll sticky">
                         <article>
-                            <header>Hozzászólások Listája</header>
+                            <header>Tasks coming up</header>
                             <ul id="txts">
                                 
                             </ul>
                         </article>
                         
                         <article>
-                            <header>Új hozzászólás</header>
-                            <input id="txt" type="text" placeholder="Új bejegyzés" />
-                            <button id="action">Hozzáadás</button>
+                            <header>Add a task</header>
+                            <input id="txt" type="text" placeholder="New task" />
+                            <button id="action">Add</button>
                         </article>
                     </section>
                 </div>
@@ -63,4 +63,3 @@
             document.getElementById ("action").addEventListener ("click", kezelo);
         </script>
     </body>
-</html>
