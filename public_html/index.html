@@ -1,65 +1,100 @@
 <!DOCTYPE html>
-
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
         <title>RUSH</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <link href="style/drawer.css" rel="stylesheet" type="text/css" />
-        <link href="style/headers.css" rel="stylesheet" type="text/css" />
-        <link href="style/app.css" rel="stylesheet" type="text/css"/>
-
-        <link href="style/layout.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="style/buttons.css">
+        <link rel="stylesheet" href="style/headers.css">
+        <link rel="stylesheet" href="style/transitions.css">
+        <link rel="stylesheet" href="style/util.css">
+        <link rel="stylesheet" href="style/fonts.css">
+        <link rel="stylesheet" href="style/app.css">
+        <link rel="stylesheet" href="style/layout.css">
+        <link href="https://mdn.github.io/gaia-2.0-bb/lists.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" defer src="js/app.js"></script>
     </head>
     <body>
-        <div>
-            <section data-type="sidebar">
-                <header>
-                    <h1>Menu</h1>
-                </header>
-                <nav>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="exit.html">Exit</a></li>
-                    </ul>
-                </nav>
-            </section>
+        <!-- index view -->
+        <section id="index" data-position="current">
             <section id="drawer" role="region">
-                <header>
-                    <a href="#content"><span class="icon icon-menu">hide sidebar</span></a>
-                    <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
-                    <h1>Task List</h1>
+                <header class="fixed">
+                    <h1>Dashboard</h1>
                 </header>
-                <div role="main">
-                    <section class="gaia-list fit scroll sticky">
-                        <article>
-                            <header>Tasks coming up</header>
-                            <ul id="txts">
-                                
-                            </ul>
-                        </article>
-                        
-                        <article>
-                            <header>Add a task</header>
-                            <input id="txt" type="text" placeholder="New task" />
-                            <button id="action">Add</button>
-                        </article>
+                <article class="content scrollable header">
+                    <div align="center">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="images/logo_env.fw.png" width="100" height="100" alt="logo" />
+                                </td>
+                                <td>
+                                    <h2>XX upcoming tasks</h2>
+                                    <h2>XX resolved tasks</h2>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <hr />
+                    <section data-type="list">
+                        <header>Planning & organizing</header>
+                        <ul>
+                            <li>
+                                <a href="#" id="btn-show-tasks">
+                                    <p>Upcoming tasks</p>
+                                    <p>View your tasks and details</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="btn-add-task">
+                                    <p>Add tasks</p>
+                                    <p>Create a task and add details</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <header>Motivation & entertainment</header>
+                        <ul>
+                            <li>
+                                <a href="#" id="btn-add-task">
+                                    <p>Achievements</p>
+                                    <p>View your points and achievements</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="btn-add-task">
+                                    <p>Profile and statistics</p>
+                                    <p>Stats of your tasks and yourself</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <header>Application</header>
+                        <ul>
+                            <li>
+                                <a href="#" id="btn-add-task">
+                                    <p>Settings</p>
+                                    <p>Select your most suitable option</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="btn-add-task">
+                                    <p>Exit</p>
+                                    <p>Saying goodbye to the app</p>
+                                </a>
+                            </li>
+                        </ul>
                     </section>
-                </div>
+                </article>
             </section>
+        </section>
 
-        </div>
-        
-        <script type="text/javascript">
-            document.querySelector("div[role='main']").style.height = "" + (screen.height - 74) + "px";
-            
-            function kezelo () {
-                var li = document.createElement ("li");
-                li.innerHTML = document.getElementById("txt").value;
-                document.getElementById("txts").appendChild (li);
-            }
-            
-            document.getElementById ("action").addEventListener ("click", kezelo);
-        </script>
+        <!-- upcoming tasks view -->
+        <section role="region" id="show-tasks" data-position="right">
+            <header class="fixed">
+                <a id="btn-back" href="#"><span class="icon icon-back">back</span></a>
+                <h1>Upcoming tasks</h1>
+            </header>
+            <article class="content scrollable header">
+            </article>
+        </section>
     </body>
+</html>
