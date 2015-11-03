@@ -88,9 +88,11 @@ p {
 /* Lists */
 .gaia-list {
   font-size: 18px;
+  color:#fff;
 }
 
 .gaia-list li {
+  background: #212121;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -134,12 +136,12 @@ p {
   height: 30px;
   line-height: 40px;
   font-weight: normal;
-  color: #ff4e00;
+  color: #fff;
   text-transform: uppercase;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background: #fff;
+  background: #27CABF;
 }
 
 .gaia-list.sticky header {
