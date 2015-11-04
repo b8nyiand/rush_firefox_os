@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="style/fonts.css">
         <link rel="stylesheet" href="style/app.css">
         <link rel="stylesheet" href="style/layout.css">
-        <link href="https://mdn.github.io/gaia-2.0-bb/lists.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="style/lists.css">
+        <link rel="stylesheet" href="style/confirm.css">
         <script type="text/javascript" defer src="js/app.js"></script>
     </head>
     <body>
@@ -55,13 +56,13 @@
                         <header>Motivation & entertainment</header>
                         <ul>
                             <li>
-                                <a href="#" id="btn-add-task">
+                                <a href="#" id="btn-show-achievements">
                                     <p>Achievements</p>
                                     <p>View your points and achievements</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" id="btn-add-task">
+                                <a href="#" id="btn-show-profile-stats">
                                     <p>Profile and statistics</p>
                                     <p>Stats of your tasks and yourself</p>
                                 </a>
@@ -70,13 +71,13 @@
                         <header>Application</header>
                         <ul>
                             <li>
-                                <a href="#" id="btn-add-task">
+                                <a href="#" id="btn-settings">
                                     <p>Settings</p>
                                     <p>Select your most suitable option</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" id="btn-add-task">
+                                <a href="#" id="btn-exit-app">
                                     <p>Exit</p>
                                     <p>Saying goodbye to the app</p>
                                 </a>
@@ -95,6 +96,60 @@
             </header>
             <article class="content scrollable header">
             </article>
+        </section>
+
+        <!-- add task view -->
+        <section role="region" id="add-task" data-position="right">
+            <header class="fixed">
+                <a id="btn-back1" href="#"><span class="icon icon-back">back</span></a>
+                <h1>Add a task</h1>
+            </header>
+            <article class="content scrollable header">
+            </article>
+        </section>
+
+        <!-- achievements view -->
+        <section role="region" id="show-achievements" data-position="right">
+            <header class="fixed">
+                <a id="btn-back2" href="#"><span class="icon icon-back">back</span></a>
+                <h1>My achievements</h1>
+            </header>
+            <article class="content scrollable header">
+            </article>
+        </section>
+
+        <!-- profile and statistics view -->
+        <section role="region" id="show-profile-stats" data-position="right">
+            <header class="fixed">
+                <a id="btn-back3" href="#"><span class="icon icon-back">back</span></a>
+                <h1>Profile and statistics</h1>
+            </header>
+            <article class="content scrollable header">
+            </article>
+        </section>
+
+        <!-- settings view -->
+        <section role="region" id="settings" data-position="right">
+            <header class="fixed">
+                <a id="btn-back4" href="#"><span class="icon icon-back">back</span></a>
+                <h1>Settings</h1>
+            </header>
+            <article class="content scrollable header">
+            </article>
+        </section>
+
+        <!-- exit confirmation view -->
+        <section role="region" id="exit-app" data-position="right">
+            <form role="dialog" data-type="confirm">
+                <section>
+                    <h1>RUSH exit confirmation</h1>
+                    <p>Are you sure you want to close RUSH?</p>
+                </section>
+                <menu>
+                    <button class="recommend" id="btn-exit-no">Cancel</button>
+                    <button class="danger" id="btn-exit-yes">Exit</button>
+                </menu>
+            </form>
         </section>
     </body>
 </html>
