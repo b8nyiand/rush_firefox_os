@@ -1,10 +1,10 @@
 {
-  "name": "Rush",
-  "description": "Időszervezés profi módon.",
+  "name": "RUSH",
+  "description": "Organize your time. Get a life.",
   "launch_path": "/index.html",
   "icons": {
-    "512": "/img/icon-512.png",
-    "128": "/img/icon-128.png"
+    "512": "/images/icon-512.png",
+    "128": "/images/icon-128.png"
   },
   "developer": {
     "name": "b8nyiand",
