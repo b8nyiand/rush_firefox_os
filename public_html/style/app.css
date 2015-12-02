@@ -143,3 +143,7 @@
     .landscape section[role="region"]#drawer > header:first-child {
       /* Whatever needs to be changed on landscape */
     }
+    
+    .form-label {
+        color: #fff;
+    }

@@ -13,9 +13,13 @@
         <link rel="stylesheet" href="style/layout.css">
         <link rel="stylesheet" href="style/lists.css">
         <link rel="stylesheet" href="style/confirm.css">
+        <link rel="stylesheet" href="style/input_areas.css">
+        <link rel="stylesheet" href="style/value_selector.css">
+        <link rel="stylesheet" href="style/switches.css">
         <script type="text/javascript" defer src="js/app.js"></script>
     </head>
     <body>
+
         <!-- index view -->
         <section id="index" data-position="current">
             <section id="drawer" role="region">
@@ -30,8 +34,8 @@
                                     <img src="images/logo_env.fw.png" width="100" height="100" alt="logo" />
                                 </td>
                                 <td>
-                                    <h2>XX upcoming tasks</h2>
-                                    <h2>XX resolved tasks</h2>
+                                    <h2>Organize your time.</h2>
+                                    <h2>Get a life.</h2>
                                 </td>
                             </tr>
                         </table>
@@ -61,21 +65,9 @@
                                     <p>View your points and achievements</p>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#" id="btn-show-profile-stats">
-                                    <p>Profile and statistics</p>
-                                    <p>Stats of your tasks and yourself</p>
-                                </a>
-                            </li>
                         </ul>
                         <header>Application</header>
                         <ul>
-                            <li>
-                                <a href="#" id="btn-settings">
-                                    <p>Settings</p>
-                                    <p>Select your most suitable option</p>
-                                </a>
-                            </li>
                             <li>
                                 <a href="#" id="btn-exit-app">
                                     <p>Exit</p>
@@ -95,6 +87,11 @@
                 <h1>Upcoming tasks</h1>
             </header>
             <article class="content scrollable header">
+                <section data-type="list">
+                    <ul id="show">
+
+                    </ul>
+                </section>
             </article>
         </section>
 
@@ -105,6 +102,39 @@
                 <h1>Add a task</h1>
             </header>
             <article class="content scrollable header">
+                <br />
+                <form id="add-task-form" action="index.html">
+                    <p>
+                        <input id="task-name" type="text" placeholder="Task name" required="">
+                        <!-- <button type="reset">Clear</button> -->
+                    </p>
+                    <p>
+                        <textarea id="task-description" placeholder="Description" required=""></textarea>
+                    </p>
+
+                    <p>
+                        <input id="task-type" type="text" placeholder="Category" required="">
+                    </p>
+                    <table>
+                        <tr>
+                            <td>
+                                <p class="form-label" align="left">Urgent</p>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="urgent-box" align="right" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="form-label" align="left">Deadline&nbsp;&nbsp;</p>
+                            </td>
+                            <td>
+                                <input id="deadline" type="date">
+                            </td>
+                        </tr>
+                    </table>
+                    <button class="recommend" type="submit" id="submit">Add task</button>
+                </form>
             </article>
         </section>
 
@@ -115,28 +145,19 @@
                 <h1>My achievements</h1>
             </header>
             <article class="content scrollable header">
+                <section data-type="list">
+                    <header>SOON</header>
+                    <ul>
+                        <li>
+                            <p>Feature is under development...</p>
+                            <p>May come in the next version of RUSH</p>
+                        </li>
+                    </ul>
+                </section>
             </article>
         </section>
 
-        <!-- profile and statistics view -->
-        <section role="region" id="show-profile-stats" data-position="right">
-            <header class="fixed">
-                <a id="btn-back3" href="#"><span class="icon icon-back">back</span></a>
-                <h1>Profile and statistics</h1>
-            </header>
-            <article class="content scrollable header">
-            </article>
-        </section>
 
-        <!-- settings view -->
-        <section role="region" id="settings" data-position="right">
-            <header class="fixed">
-                <a id="btn-back4" href="#"><span class="icon icon-back">back</span></a>
-                <h1>Settings</h1>
-            </header>
-            <article class="content scrollable header">
-            </article>
-        </section>
 
         <!-- exit confirmation view -->
         <section role="region" id="exit-app" data-position="right">
